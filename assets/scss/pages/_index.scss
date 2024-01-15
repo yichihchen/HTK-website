@@ -17,26 +17,26 @@
   .IntercityBus {
     width: 20%; //20%
     background-color: rgb(255, 109, 48);
-    padding: 1vw;  //24px
+    padding: 1vw; //24px
   }
 
   .Destination {
     width: 40%; //40%
     background-color: rgb(224, 240, 255);
-    padding: 1vw;  //24px
+    padding: 1vw; //24px
   }
 
 
   .Gate {
     width: 20%; //20%
     background-color: rgb(224, 240, 255);
-    padding: 1vw;  //24px
+    padding: 1vw; //24px
   }
 
   .Dep {
     width: 20%; //20%
     background-color: rgb(224, 240, 255);
-    padding: 1vw;  //24px
+    padding: 1vw; //24px
 
   }
 
@@ -54,7 +54,7 @@
 //bus-content
 .bus-content {
   background-color: rgb(249, 249, 249);
-  padding: 24px;  //1vw
+  padding: 24px; //1vw
 
   .IntercityBus {
     width: 20%;
@@ -94,10 +94,15 @@
 //speaker
 .speaker {
   background-color: rgb(84, 88, 90);
-  height: 4vh;   //168px/3840px
+  height: 4vh; //168px/3840px
+
+  img {
+    width: 90%;
+    height: 90%;
+  }
 
   .speaker-content {
-    font-size: 2vw;  //48px
+    font-size: 2vw; //48px
     padding-left: 2vw;
   }
 }
