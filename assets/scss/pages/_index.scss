@@ -17,7 +17,7 @@
   .IntercityBus {
     width: 20%; //20%
     background-color: rgb(255, 109, 48);
-    padding: 1vw;
+    padding: 1vw;  //24px
   }
 
   .Destination {
@@ -51,7 +51,7 @@
 //bus-content
 .bus-content {
   background-color: rgb(249, 249, 249);
-  padding: 24px;
+  padding: 24px;  //1vw
 
   .IntercityBus {
     width: 20%;
@@ -91,9 +91,9 @@
 //speaker
 .speaker {
   background-color: rgb(84, 88, 90);
-  height: 168px;
+  height: 168px;   //168px
 
   .speaker-content {
-    font-size: 3em;
+    font-size: 3vw;  //48px
   }
 }
