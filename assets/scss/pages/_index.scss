@@ -58,30 +58,39 @@
 
   .IntercityBus {
     width: 20%;
-
     border-right: 1px solid rgb(116, 116, 116);
   }
 
   .number {
     font-size: 4vw; //96px
+    .chinese-title {
+      font-size: 3vw; //80px/2160px
+  
+    }
   }
 
   .Destination {
-
     width: 40%;
+    .chinese-title {
+      font-size: 3vw; //80px/2160px
+  
+    }
   }
 
   .Gate {
     width: 20%;
+    .chinese-title {
+      font-size: 4vw; 
+  
+    }
   }
 
   .Dep {
     width: 20%;
-  }
-
-  .chinese-title {
-    font-size: 3vw; //80px/2160px
-
+    .chinese-title {
+      font-size: 4vw; 
+  
+    }
   }
 
   .english-title {
