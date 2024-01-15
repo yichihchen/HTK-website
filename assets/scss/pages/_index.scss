@@ -2,45 +2,50 @@
   background-image: url(/assets/images/escalator_ad1.svg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   width: 100%;
   height: 40vh; //調整
 }
 
 //bus-title
 .bus-title {
+
+  .fa-bus {
+    font-size: 2vw;
+  }
+
   .IntercityBus {
-    width: 20vw;  //20%
+    width: 20%; //20%
     background-color: rgb(255, 109, 48);
 
   }
 
   .Destination {
-    width: 40vw; //40%
+    width: 40%; //40%
     background-color: rgb(224, 240, 255);
-    }
+  }
 
 
-.Gate {
-  width: 20vw; //20%
-  background-color: rgb(224, 240, 255);
-}
+  .Gate {
+    width: 20%; //20%
+    background-color: rgb(224, 240, 255);
+  }
 
-.Dep {
-  width: 20vw;  //20%
-  background-color: rgb(224, 240, 255);
-  
-}
+  .Dep {
+    width: 20%; //20%
+    background-color: rgb(224, 240, 255);
 
-.chinese-title {
-  font-size: 4vw;  //80px
+  }
 
-}
+  .chinese-title {
+    font-size: 4vw; //80px
 
-.english-title {
-  font-size: 2vw; //36px
+  }
 
-}
+  .english-title {
+    font-size: 2vw; //36px
+
+  }
 }
 
 //bus-content
@@ -77,8 +82,7 @@
   }
 
   .english-title {
-    font-size: 2vw;    //36px
-
+    font-size: 2vw; //36px
   }
 }
 
