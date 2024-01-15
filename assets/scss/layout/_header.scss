@@ -7,22 +7,21 @@ header {
 
   .logo {
     background-image: url(/assets/images/mode_of_travel.svg);
-    width: 12vw;   //252px
-    height:12vw;     //256px
+    width: 12vw; //252px
+    height: 12vw; //256px
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   h1 {
-    
+
     font-size: 5vw; //120px
     letter-spacing: 16px;
-
-
   }
-  .header-subtitle{
-    font-size: 3.5em;
+
+  .header-subtitle {
+    font-size: 3vw; //56px
   }
 
   .time {
@@ -33,7 +32,8 @@ header {
   .time-content {
     font-size: 5em;
   }
-  .time-zone{
+
+  .time-zone {
     font-size: 3.75em;
   }
 
