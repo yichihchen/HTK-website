@@ -1,29 +1,39 @@
 header {
   background-image: url(/assets/images/escalator_head.svg);
-  background-position:center center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 400px;
- .logo{
-  background-image: url(/assets/images/mode_of_travel.svg);
-  width: 254px;
-  height: 256px;
-  background-position:center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-   }
-  h1{
-    font-size: 120px;
+  padding: 4em 3em;
+
+  .logo {
+    background-image: url(/assets/images/mode_of_travel.svg);
+    width: 254px;
+    height: 256px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .time{
+
+  h1 {
+    font-size: 7.5em; //120px
+    letter-spacing: 16px;
+
+
+  }
+  .header-subtitle{
+    font-size: 3.5em;
+  }
+
+  .time {
     position: relative;
-    // top: -50%; 要怎麼用才可以一上去一些
+    top: -1.5em; //往上移一些
   }
-  .time-content{
-    font-size: 80px;
+
+  .time-content {
+    font-size: 5em;
   }
-           
-  .time-date{
-    font-size: 48px;
+
+  .time-date {
+    font-size: 3em;
   }
 }
