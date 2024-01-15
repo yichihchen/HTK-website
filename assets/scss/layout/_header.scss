@@ -1,4 +1,29 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+header {
+  background-image: url(/assets/images/escalator_head.svg);
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 400px;
+ .logo{
+  background-image: url(/assets/images/mode_of_travel.svg);
+  width: 254px;
+  height: 256px;
+  background-position:center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   }
+  h1{
+    font-size: 120px;
+  }
+  .time{
+    position: relative;
+    // top: -50%; 要怎麼用才可以一上去一些
+  }
+  .time-content{
+    font-size: 80px;
+  }
+           
+  .time-date{
+    font-size: 48px;
+  }
 }
