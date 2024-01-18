@@ -63,33 +63,37 @@
 
   .number {
     font-size: 4vw; //96px
+
     .chinese-title {
       font-size: 3vw; //80px/2160px
-  
+
     }
   }
 
   .Destination {
     width: 40%;
+
     .chinese-title {
       font-size: 3vw; //80px/2160px
-  
+
     }
   }
 
   .Gate {
     width: 20%;
+
     .chinese-title {
-      font-size: 5vw; 
-  
+      font-size: 5vw;
+
     }
   }
 
   .Dep {
     width: 20%;
+
     .chinese-title {
-      font-size: 5vw; 
-  
+      font-size: 5vw;
+
     }
   }
 
@@ -104,9 +108,46 @@
 .speaker {
   background-color: rgb(84, 88, 90);
   height: 4vh; //168px/3840px
+ 
 
   .speaker-content {
     font-size: 2vw; //48px
     padding-left: 2vw;
+
   }
+
+  .speaker-content-wrap {  
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+   
+    outline: 1px solid red;
+  }
+
+  .ticker-item {
+    animation-name: ticker-item;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+   
+    display: inline-block;
+    outline: 1px solid red;
+
+  }
+
+  @keyframes ticker-item {
+    0% {
+
+      transform: translate3d(140%, 0, 0);
+      visibility: visible;
+    }
+
+
+    100% {
+      transform: translate3d(-100%, 0, 0);
+
+    }
+
+  }
+
 }
