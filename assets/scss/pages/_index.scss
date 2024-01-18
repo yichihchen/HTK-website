@@ -117,10 +117,11 @@
   }
 
   .speaker-content-wrap {  
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-   
+    position: relative;  //重要
+    overflow: hidden;    //重要
+    // width: 100%;
+    width: 100vw;
+    height: 100vh;
     outline: 1px solid red;
   }
 
