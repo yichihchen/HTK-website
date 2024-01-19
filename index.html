@@ -135,29 +135,25 @@
 </div>
       
       <script>
-        const marqueeContainer = document.querySelector('.speaker-content-wrap');
+        const marqueeContainer = document.getElementById('marqueeContainer');
         const canvas = document.getElementById('marqueeCanvas');
         const ctx = canvas.getContext('2d');
         const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
         const textColor = '#FFFFFF';
         const backgroundColor = '#54585A';
-        const fontSize = 20;
-
-        // 計算 marqueeText 移動速度
-        const marqueeSpeed = 2;
-        const textSpeed = marqueeSpeed * 1; // 這裡假設文字速度是 marqueeSpeed 的一倍 2
+        const fontSize = 1.5; // 使用相對大小，這裡是相對於螢幕寬度的百分比
 
         canvas.width = marqueeContainer.clientWidth;
         canvas.height = marqueeContainer.clientHeight;
 
-        ctx.font = `${fontSize}px Arial`;
+        ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
         ctx.fillStyle = textColor;
 
         function draw() {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.fillText(marqueeText, draw.position, fontSize + canvas.height / 2);
 
-          draw.position -= textSpeed; // 使用文字的速度
+          draw.position -= 2;
 
           if (draw.position < -ctx.measureText(marqueeText).width) {
             draw.position = canvas.width;
@@ -169,6 +165,7 @@
         draw.position = canvas.width;
 
         draw();
+
 
 
       </script>
