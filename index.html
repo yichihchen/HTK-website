@@ -205,12 +205,52 @@
         // draw();
 
         //第三次
+        // const marqueeContainer = document.getElementById('marqueeContainer');
+        // const canvas = document.getElementById('marqueeCanvas');
+        // const ctx = canvas.getContext('2d');
+        // const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
+        // const textColor = '#FFFFFF';
+        // const backgroundColor = '#54585A';
+        // const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
+
+        // canvas.width = marqueeContainer.clientWidth;
+        // canvas.height = marqueeContainer.clientHeight;
+
+        // ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
+        // ctx.fillStyle = textColor;
+
+        // function draw() {
+        //   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        //   const textWidth = ctx.measureText(marqueeText).width;
+        //   const containerWidth = marqueeContainer.clientWidth;
+
+        //   let xPos = draw.position;
+
+        //   // 如果文字的位置小於容器的寬度，則讓文字重新開始
+        //   if (xPos < -textWidth) {
+        //     xPos = containerWidth;
+        //   }
+
+        //   const yPos = fontSize + canvas.height / 2;
+
+        //   ctx.fillText(marqueeText, xPos, yPos);
+
+        //   draw.position -= 1;
+
+        //   requestAnimationFrame(draw);
+        // }
+
+        // draw.position = canvas.width;
+
+        // draw();
+
+        //第四次
         const marqueeContainer = document.getElementById('marqueeContainer');
         const canvas = document.getElementById('marqueeCanvas');
         const ctx = canvas.getContext('2d');
         const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
         const textColor = '#FFFFFF';
-        const backgroundColor = '#54585A';
         const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
 
         canvas.width = marqueeContainer.clientWidth;
@@ -222,17 +262,12 @@
         function draw() {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-          const textWidth = ctx.measureText(marqueeText).width;
-          const containerWidth = marqueeContainer.clientWidth;
+          const textHeight = fontSize;
+          const containerHeight = marqueeContainer.clientHeight;
 
-          let xPos = draw.position;
+          let yPos = (containerHeight + textHeight) / 2;
 
-          // 如果文字的位置小於容器的寬度，則讓文字重新開始
-          if (xPos < -textWidth) {
-            xPos = containerWidth;
-          }
-
-          const yPos = fontSize + canvas.height / 2;
+          const xPos = draw.position;
 
           ctx.fillText(marqueeText, xPos, yPos);
 
@@ -241,10 +276,9 @@
           requestAnimationFrame(draw);
         }
 
-        draw.position = canvas.width;
+        draw.position = 0;
 
         draw();
-
 
 
       </script>
