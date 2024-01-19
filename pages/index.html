@@ -122,7 +122,7 @@
         const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
         const textColor = '#FFFFFF';
         const backgroundColor = '#54585A';
-        const fontSize = 4; // 使用相對大小，這裡是相對於螢幕寬度的百分比
+        const fontSize = 3; // 使用相對大小，相對於螢幕寬度的百分比
 
         canvas.width = marqueeContainer.clientWidth;
         canvas.height = marqueeContainer.clientHeight;
@@ -134,7 +134,7 @@
           ctx.clearRect(0, 0, canvas.width, canvas.height);
           ctx.fillText(marqueeText, draw.position, fontSize + canvas.height / 2);
 
-          draw.position -= 1;
+          draw.position -= 1;  //速度放慢
 
           if (draw.position < -ctx.measureText(marqueeText).width) {
             draw.position = canvas.width;
