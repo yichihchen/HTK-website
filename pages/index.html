@@ -105,7 +105,7 @@
     <div class="contianer-fluid speaker d-flex align-items-center">
       <img src="/assets/images/speaker.svg" alt="speaker">
       <div class="speaker-content-wrap d-flex">
-        <p class="speaker-content ticker-item text-white m-0" id="marqueeContainer"><canvas id="marqueeCanvas"></canvas>
+        <p class="speaker-content ticker-item text-white m-0 align-items-center" id="marqueeContainer"><canvas id="marqueeCanvas"></canvas>
         </p>
       </div>
 
@@ -127,7 +127,7 @@
         // canvas.width = marqueeContainer.clientWidth;
         // canvas.height = marqueeContainer.clientHeight;
 
-        // ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
+        // ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位npm r
         // ctx.fillStyle = textColor;
 
         // function draw() {
@@ -149,44 +149,6 @@
 
 
         //第二次
-        // const marqueeContainer = document.getElementById('marqueeContainer');
-        // const canvas = document.getElementById('marqueeCanvas');
-        // const ctx = canvas.getContext('2d');
-        // const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
-        // const textColor = '#FFFFFF';
-        // const backgroundColor = '#54585A';
-        // const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
-
-        // canvas.width = marqueeContainer.clientWidth;
-        // canvas.height = marqueeContainer.clientHeight;
-
-        // ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
-        // ctx.fillStyle = textColor;
-
-        // function draw() {
-        //   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        //   const textWidth = ctx.measureText(marqueeText).width;
-        //   const xPos = (canvas.width - textWidth) / 2; // 計算文字的 x 位置使其置中
-        //   const yPos = fontSize + canvas.height / 2;
-
-        //   ctx.fillText(marqueeText, draw.position + xPos, yPos);
-
-        //   draw.position -= 10;
-
-        //   if (draw.position < -textWidth) {
-        //     draw.position = canvas.width;
-        //   }
-
-        //   requestAnimationFrame(draw);
-        // }
-
-        // draw.position = canvas.width;
-
-        // draw();
-
-        //第三次
-
         const marqueeContainer = document.getElementById('marqueeContainer');
         const canvas = document.getElementById('marqueeCanvas');
         const ctx = canvas.getContext('2d');
@@ -205,18 +167,15 @@
           ctx.clearRect(0, 0, canvas.width, canvas.height);
 
           const textWidth = ctx.measureText(marqueeText).width;
-          const containerWidth = marqueeContainer.clientWidth;
-          const containerHeight = marqueeContainer.clientHeight;
+          const xPos = (canvas.width - textWidth) / 2; // 計算文字的 x 位置使其置中
+          const yPos = fontSize + canvas.height / 2;
 
-          const xPos = (containerWidth - textWidth) / 2 + draw.position;
-          const yPos = (containerHeight + fontSize) / 2;
+          ctx.fillText(marqueeText, draw.position + xPos, yPos);
 
-          ctx.fillText(marqueeText, xPos, yPos);
-
-          draw.position -= 20;
+          draw.position -= 10;
 
           if (draw.position < -textWidth) {
-            draw.position = containerWidth;
+            draw.position = canvas.width;
           }
 
           requestAnimationFrame(draw);
@@ -224,13 +183,54 @@
 
         draw.position = canvas.width;
 
-        function startMarquee() {
-          draw.position = canvas.width;
-          draw();
-        }
+        draw();
 
-        // 啟動跑馬燈
-        startMarquee();
+        //第三次
+
+        // const marqueeContainer = document.getElementById('marqueeContainer');
+        // const canvas = document.getElementById('marqueeCanvas');
+        // const ctx = canvas.getContext('2d');
+        // const marqueeText = '親愛的乘客們，1813號公車將於5分鐘內抵達，請要搭乘的乘客盡快前往月台候車。';
+        // const textColor = '#FFFFFF';
+        // const backgroundColor = '#54585A';
+        // const fontSize = 3; // 使用相對大小，這裡是相對於螢幕寬度的百分比
+
+        // canvas.width = marqueeContainer.clientWidth;
+        // canvas.height = marqueeContainer.clientHeight;
+
+        // ctx.font = `${fontSize}vw Arial`; // 使用 vw 單位
+        // ctx.fillStyle = textColor;
+
+        // function draw() {
+        //   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        //   const textWidth = ctx.measureText(marqueeText).width;
+        //   const containerWidth = marqueeContainer.clientWidth;
+        //   const containerHeight = marqueeContainer.clientHeight;
+
+        //   const xPos = (containerWidth - textWidth) / 2 + draw.position;
+        //   const yPos = (containerHeight + fontSize) / 2;
+
+        //   ctx.fillText(marqueeText, xPos, yPos);
+
+        //   draw.position -= 20;
+
+        //   if (draw.position < -textWidth) {
+        //     draw.position = containerWidth;
+        //   }
+
+        //   requestAnimationFrame(draw);
+        // }
+
+        // draw.position = canvas.width;
+
+        // function startMarquee() {
+        //   draw.position = canvas.width;
+        //   draw();
+        // }
+
+        // // 啟動跑馬燈
+        // startMarquee();
 
 
 
