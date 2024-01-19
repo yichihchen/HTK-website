@@ -121,19 +121,20 @@
     overflow: hidden; //重要
     width: 100%;
 
-    outline: 1px solid red;
+    // outline: 1px solid red;
   }
 
- 
+
 }
 
 //canvas
 canvas {
   display: block;
+ 
 }
 
 #marqueeContainer {
   // height: 200px;   //調整
-
+  outline:1px solid red;
   height: fit-content;
 }
